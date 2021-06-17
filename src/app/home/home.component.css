@@ -1,0 +1,13 @@
+.card a {
+    text-decoration: none;
+    color: #000;
+}
+
+.card a:hover {
+    color: gray;
+}
+
+.card h5 {
+    font-family: barlow;
+    font-size: 27px;
+} 

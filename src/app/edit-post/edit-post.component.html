@@ -1,0 +1,30 @@
+<div *ngIf="updated" class="container d-flex justify-content-center mt-5">
+    <div class="alert alert-success d-flex align-items-center shadow" role="alert">
+    <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Success:">
+      <use xlink:href="#check-circle-fill" /></svg>
+    <div>
+      Post was updated successfully
+    </div>
+  </div>
+</div>
+
+<!-- Form -->
+<div class="container d-flex justify-content-center mt-5">
+  <div class="card shadow w-50">
+    <div class="card-body">
+      <h5 class="card-title">Edit Post</h5>
+      <hr>
+      <form [formGroup]="editPost" (ngSubmit)="onSubmit()">
+        <div class="form-group">
+          <input id="title" formControlName="title" class="form-control mb-3" type="text" name="title" placeholder="Post title">
+        </div>
+        <div class="form-group">
+          <textarea name="content" formControlName="content" class="form-control mb-3" placeholder="What's on your mind?"></textarea>
+        </div>
+        <div class="form-group d-flex justify-content-end">
+          <input type="submit" class="btn btn-info shadow text-light" value="Post Content">
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
